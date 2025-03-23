@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  /*root color */
+  --bgdark: rgb(37, 35, 35);
+  --bglight: white;
+  --blue: rgb(12, 75, 201);
+  --white: white;
+  --skyblue: rgb(12, 156, 214);
+  --rebeccapurple02: rgba(102, 51, 153, 0.26);
+  --rebeccapurple: rgba(130, 6, 254, 0.509);
+  --lightgray1: rgba(141, 141, 141, 0.23);
+  --lightgray: rgba(141, 141, 141, 0.73);
+
+  /* root variables */
+  --four: 4px;
+  --six: 6px;
+  --eight: 8px;
+  --ten: 10px;
+  --sixteen: 16px;
+  --twenty4: 24px;
+  --thirty2: 32px;
+  --thirty5: 35px;
+  --eighty: 80px;
+
+  /* root flex */
+
+  --flex: flex;
+  --item_center: center;
+  --justify_center: center;
+
+  /*root outline: ; */
+  --outline_none: none;
+
+  /* root shadow */
+  --shadow4_4_8: 4px 4px 8px #0003, 0px 0px 0.8px #0003;
+
+  /* root padding: ; */
+  --padding4_8: 4px 8px;
+  --padding8_16: 8px 16px;
+  --padding8_12: 8px 12px;
+  --padding8_20: 8px 20px;
+  --padding8_24: 8px 24px;
+  --padding8_14: 8px 14px;
+  --padding10_20: 10px 20px;
+  --padding10_2: 10px 2px;
+  --padding24_16: 24px 16px;
+
+  /*root radius */
+  --radius300: 300px;
+
+  /*root border */
+  --border_thin_transparent: 1px solid transparent;
+  --border_thin_gray: 1px solid gray;
+
+  /*root font font-weight: ; */
+  --font_weight500: 500;
+
+  /* root font-size: ; */
+  --font_size16: 16px;
+  --font_size24: 24px;
+
+  /*root letter-spacing: ; */
+  --letter_spacing_1: 1px;
+
+  /*root filter brightness */
+  --filter_brightness_09: brightness(0.9);
+  --filter_brightness_13: brightness(1.3);
+  --filter_brightness3: brightness(3);
+
+  /* root radial background  */
+  --bgradial: radial-gradient(#1616ad, #160257 30%);
+}
+
+/* default button  */
+button {
+  padding: var(--padding8_24);
+  border-radius: var(--radius300);
+  background-color: var(--blue);
+  color: var(--white);
+  outline: var(--outline_none);
+  border: var(--border_thin_transparent);
+  font-weight: var(--font_weight500);
+  font-size: var(--font_size16);
+  letter-spacing: var(--letter_spacing_1);
+  transition: filter 0.1s;
+}
+
+button:hover {
+  filter: var(--filter_brightness_13);
+}
+
+button:active {
+  filter: var(--filter_brightness_09);
+}
+
+/* default input  */
+input {
+  border-radius: var(--radius300);
+  padding: var(--padding10_20);
+  outline: var(--outline_none);
+  border: var(--border_thin_gray);
+  letter-spacing: var(--letter_spacing_1);
+  font-size: var(--font_size16);
+}
+
+input:focus {
+  border-color: var(--skyblue);
+}
+
+/* input component */
+
+.componentInput {
+  border-radius: var(--radius300);
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow4_4_8);
+  background-color: var(--white);
+}
+
+.componentInput input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.componentInput .itag {
+  color: var(--bgdark);
+}
+.componentInputPaddingLeft input {
+  padding-left: 4px;
+}
+
+/* default itag component */
+
+.itag {
+  padding: var(--padding8_14);
+  border-radius: var(--radius300);
+  font-size: var(--font_size24);
+  user-select: none;
+}
+
+.itag {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.itag:hover {
+  background-color: var(--rebeccapurple02);
+  transition: background 0.2s;
+}
+.itag:active {
+  background-color: rgba(68, 65, 65, 0.705);
+  filter: brightness(5);
+}
+
+/* card component */
+
+.card {
+  box-shadow: var(--shadow4_4_8);
+  padding: var(--padding24_16);
+  border-radius: var(--ten);
+}
+
+.linkCard {
+  box-shadow: var(--shadow4_4_8);
+  padding: var(--sixteen);
+  border-radius: var(--ten);
+}
+
+/* flex practice  */
+
+.weatherCardContainer {
+  background-image: var(--bgradial);
+  min-height: 100svh;
+  color: white;
+  padding: 32px 0;
+  position: relative;
+}
+
+.weatherCardContainer .innerWeatherCardContainer {
+  max-width: 1460px;
+  width: 100%;
+  min-height: calc(699px - 64px);
+  height: 100%;
+  margin: auto;
+  padding-inline: clamp(16px, 3vw, 32px);
+}
+
+.weatherContentContainer .box3 {
+  text-align: end;
+}
+
+.weathermenu {
+  height: 100%;
+  padding-bottom: var(--thirty2);
+  background-color: var(--rebeccapurple);
+}
+
+.weathermenu .linkContainer ul li,
+.logoutContainer {
+  list-style: none;
+  padding: 8px 20px;
+  background: transparent;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s;
+}
+
+.weathermenu .linkContainer ul li:hover,
+.logoutContainer:hover {
+  background-color: var(--lightgray1);
+}
+
+.weathermenu .linkContainer ul li:active,
+.logoutContainer:active {
+  background-color: var(--lightgray);
+  filter: var(--filter_brightness3);
+  scale: 0.95;
+  transition: background-color 0.2s, scale 0.2s, filter 0.2s;
+}
+
+.weatherHeader {
+  background-color: var(--rebeccapurple);
+}
+
+.weatherHeader .box1 {
+  font-size: clamp(12px, 2vw, 24px);
+  margin-right: 4px;
+}
+
+.weatherHeader .box1 b {
+  width: 150px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.weatherHeader .box3 div .menuIcon {
+  display: none;
+}
+
+/* weather contents box1 */
+
+.weatherContent,
+.weatherContent .box1 {
+  position: relative;
+}
+
+.weatherContent .box1 .layerBox1 {
+  padding: var(--thirty2);
+}
+
+.weatherContent .box1 .temp1 span {
+  font-size: 5rem;
+}
+.weatherContent .box1 .temp1 b {
+  font-size: 3rem;
+}
+
+/* weather contents box2 */
+
+.weatherContent .box2 {
+  min-width: 359px;
+}
+
+.weatherContent .box2 .cityNameContainer span {
+  font-size: 2.5rem;
+  max-width: 203px;
+  overflow: hidden;
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.weatherContent .box2 .box3 {
+  padding-inline: var(--thirty2);
+}
+
+.weatherContent .box2 .box3 p {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  border-bottom: 1px solid rgb(243, 235, 235);
+  padding-bottom: 6px;
+}
+
+.weatherContent > div {
+  background-color: var(--rebeccapurple);
+  border-radius: var(--ten);
+}
+
+@media (max-width: 840px) {
+  .weatherContent .box1 .temp1 span {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .weatherCardContainer .innerWeatherCardContainer {
+    min-height: calc(100svh - 64px);
+  }
+  .innerWeatherCardContainer .weatherMenuContainer {
+    position: absolute;
+    right: 24px;
+    top: 125px;
+    width: 0px;
+    height: 80%;
+    background-color: rebeccapurple;
+    border-radius: var(--ten);
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.1s ease-in-out;
+    z-index: 5;
+  }
+
+  .innerWeatherCardContainer .weatherMenuContainer.menuActive {
+    width: 160px;
+  }
+
+  .weatherHeader .box2 {
+    flex-grow: 1;
+  }
+  .weatherHeader .box3 div .bellIcon {
+    display: none;
+  }
+  .weatherHeader .box3 div .menuIcon {
+    display: inline;
+    position: relative;
+  }
+
+  .weatherContent {
+    flex-direction: column;
+  }
+}
+
+/* error box styles  */
+
+.errorBox1 span {
+  width: 49px;
+  scale: 2;
+}
+
+/* weatherContentDemo */
+
+.weatherContentDemo {
+  position: absolute;
+  /* left: 242px; */
+  /* top: 143px; */
+  z-index: 1;
+  height: 0px;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 8px;
+  background-color: transparent;
+  /* transition: height 0.3s; */
+}
+
+.innerWeatherContentDemo {
+  max-width: 700px;
+  width: 100%;
+  min-height: 600px;
+  background-color: rgb(36, 41, 43);
+  color: rgb(210, 206, 206);
+  margin: auto;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.innerWeatherContentDemo p {
+  font-size: 1.2rem;
+}
+.innerWeatherContentDemo .curentCondition {
+  padding: 20px 0;
+  border-bottom: 2px solid rgb(223, 206, 206);
+  background-image: linear-gradient(
+    to right,
+    #051cff 29%,
+    #980303 50%,
+    yellow 70%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+.innerWeatherContentDemo .curentConditionList {
+  padding: 8px 32px;
+}
+.innerWeatherContentDemo .curentConditionList li {
+  padding: 8px 0;
+  line-height: 24px;
+  font-size: 1.2rem;
+}
+
+.innerWeatherContentDemo .subheading {
+  padding: 1rem 0;
+  text-decoration: underline;
+}
+
+.showContents {
+  height: 550px;
+  overflow-y: scroll;
+  padding: 8px;
+  transition: height 0.3s;
+}
+
+.childrenCon {
+  background-image: linear-gradient(
+    to right,
+    #051cff 29%,
+    #980303 50%,
+    yellow 70%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
