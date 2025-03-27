@@ -245,7 +245,7 @@ function Weather() {
                       </span>{" "}
                     </div>
                   ) : !city ? (
-                    <h1> Loading...</h1>
+                    <h1 style={{ textAlign: "center" }}> Loading...</h1>
                   ) : (
                     <>
                       <div className="textEnd ">
@@ -276,7 +276,7 @@ function Weather() {
                     <span>{showError.error?.message || showError.message}</span>
                   </div>
                 ) : !city ? (
-                  <h1> Loading...</h1>
+                  <h1 style={{ textAlign: "center" }}> Loading...</h1>
                 ) : (
                   <>
                     <div
