@@ -297,7 +297,7 @@ input:focus {
 }
 
 .weatherContent > div {
-  background-color: var(--rebeccapurple);
+  background-color: rgb(118 20 216);
   border-radius: var(--ten);
 }
 
@@ -367,10 +367,18 @@ input:focus {
   /* transition: height 0.3s; */
 }
 
+.showContents {
+  height: 500px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding: 8px;
+  transition: height 0.3s;
+}
+
 .innerWeatherContentDemo {
   max-width: 700px;
   width: 100%;
-  min-height: 600px;
+  height: max-content;
   background-color: rgb(36, 41, 43);
   color: rgb(210, 206, 206);
   margin: auto;
@@ -407,13 +415,6 @@ input:focus {
 .innerWeatherContentDemo .subheading {
   padding: 1rem 0;
   text-decoration: underline;
-}
-
-.showContents {
-  height: 550px;
-  overflow-y: scroll;
-  padding: 8px;
-  transition: height 0.3s;
 }
 
 .childrenCon {

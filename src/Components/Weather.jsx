@@ -70,11 +70,11 @@ function Weather() {
               }
             >
               <div className=" box1 imgContainer 1">
-                <img alt="Weather" />
+                <img src={city?.current.condition.icon} alt="weather" />
               </div>
               <div className=" box2 linkContainer  ">
                 <ul className="flex gap32 flexDirectionCol ">
-                  <li
+                  {/* <li
                     onClick={() =>
                       setShowContents(
                         <ShowContent> No Content or default</ShowContent>
@@ -82,7 +82,7 @@ function Weather() {
                     }
                   >
                     🏠 Home
-                  </li>
+                  </li> */}
                   <li
                     onClick={() =>
                       setShowContents(
@@ -135,7 +135,7 @@ function Weather() {
                         <ShowContent>
                           {" "}
                           Email: <br />
-                          preetamsethiya6@gmail.com
+                          sethiyapradeep455@gmail.com
                         </ShowContent>
                       )
                     }
